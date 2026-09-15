@@ -1,27 +1,18 @@
 /* ==========================================================================
-   SCRIPT.JS - MULTI-PAGE BIRTHDAY WEBSITE LOGIC FOR KEISHA ZULFA RAMADHANI
+   SCRIPT.JS - BIRTHDAY WEBSITE LOGIC FOR KEISHA ZULFA RAMADHANI
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------------------------------
-     1. Multi-Page Navigation Switcher
+     1. Page Switcher Logic
      -------------------------------------------------------------------------- */
-  const navTabs = document.querySelectorAll('.nav-tab');
   const pageViews = document.querySelectorAll('.page-view');
   const btnNextPages = document.querySelectorAll('.btn-next-page');
 
   function switchPage(targetPageId) {
     pageViews.forEach(page => {
       page.classList.remove('active-page');
-    });
-
-    navTabs.forEach(tab => {
-      if (tab.getAttribute('data-target') === targetPageId) {
-        tab.classList.add('active');
-      } else {
-        tab.classList.remove('active');
-      }
     });
 
     const targetPage = document.getElementById(targetPageId);
@@ -31,18 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  navTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.getAttribute('data-target');
-      switchPage(target);
-    });
-  });
-
   btnNextPages.forEach(btn => {
     btn.addEventListener('click', () => {
       const target = btn.getAttribute('data-goto');
       
-      // Jika berpindah ke surat, luncurkan efek confetti
+      // Jika berpindah ke surat atau harapan, luncurkan efek confetti
       if (target === 'page-letter' || target === 'page-wishes') {
         createConfettiBurst(35);
       }
