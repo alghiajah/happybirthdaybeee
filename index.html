@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 18th Birthday, Keisha Zulfa Ramadhani! ✨</title>
+  <meta name="description" content="Website ucapan ulang tahun ke-18 spesial bertema vintage romantis untuk Keisha Zulfa Ramadhani." />
+
+  <!-- Google Fonts: Vintage Serif & Readable Sans & Handwritten Accent -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Canvas Partikel Kunang-kunang / Light Particles Background -->
+  <canvas id="fireflies-canvas"></canvas>
+
+  <!-- Texture Grain Overlay untuk Kesan Vintage -->
+  <div class="vintage-grain-overlay"></div>
+
+  <!-- Audio Element untuk Musik Latar -->
+  <!-- LINK LAGU PANASEA - RUMAHSAKIT -->
+  <audio id="bg-music" src="Panasea.mp3" preload="auto" loop></audio>
+
+  <!-- Player Piringan Hitam (Vinyl) Melayang -->
+  <div class="vinyl-player-widget" id="vinyl-widget" title="Klik untuk memutar / menghentikan lagu Panasea">
+    <div class="vinyl-disc-container">
+      <div class="vinyl-disc" id="vinyl-disc">
+        <div class="vinyl-groove"></div>
+        <div class="vinyl-groove inner"></div>
+        <div class="vinyl-label">
+          <span class="vinyl-label-icon">🎵</span>
+        </div>
+      </div>
+      <div class="tonearm" id="tonearm"></div>
+    </div>
+    <div class="vinyl-info-pill">
+      <span class="music-wave-bar"></span>
+      <span class="music-wave-bar"></span>
+      <span class="music-wave-bar"></span>
+      <span id="music-status-text">Putar Panasea 🎵</span>
+    </div>
+  </div>
+
+  <!-- Main Container Wrapper -->
+  <div class="app-container">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="hero-badge">
+        <span class="sparkle-icon">✨</span> Special 18th Birthday Celebration <span class="sparkle-icon">✨</span>
+      </div>
+
+      <h1 class="hero-title fade-in-element">
+        Happy 18th Birthday,<br />
+        <span class="highlight-name">Keisha Zulfa Ramadhani!</span>
+      </h1>
+
+      <p class="hero-subtitle fade-in-element delay-1">
+        Hari ini adalah hari istimewa untuk seseorang yang paling berharga.
+      </p>
+
+      <div class="hero-action fade-in-element delay-2">
+        <button id="btn-open-letter" class="btn-vintage-primary">
+          Buka Suratnya 💌
+        </button>
+      </div>
+
+      <div class="scroll-down-indicator">
+        <span>Gulir ke bawah</span>
+        <div class="mouse-icon">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SURAT CINTA DIGITAL SECTION -->
+    <section id="letter" class="letter-section">
+      <div class="section-badge">Surat Spesial</div>
+      <h2 class="section-title">Sebuah Pesan Untukmu 📜</h2>
+
+      <div class="letter-card-container">
+        <!-- Masking Tape Hiasan Atas Card -->
+        <div class="paper-tape tape-top-left"></div>
+        <div class="paper-tape tape-top-right"></div>
+
+        <div class="letter-card" id="letter-card">
+          <div class="wax-seal">
+            <span>18</span>
+          </div>
+
+          <div class="letter-header">
+            <span class="letter-date">18th Birthday Edition</span>
+          </div>
+
+          <div class="letter-body">
+            <!-- Teks Surat Cinta Utama -->
+            <p class="letter-paragraph" id="letter-text-1">
+              Selamat ulang tahun yang ke-18, <strong>Keisha Zulfa Ramadhani</strong>.
+            </p>
+
+            <p class="letter-paragraph" id="letter-text-2">
+              Kamu tau nggak? Buat aku, kamu itu ibarat <em>"Panasea"</em>. Sama seperti lagunya rumahsakit, kamu adalah obat mujarab dan penenang buat segala resahku.
+            </p>
+
+            <div class="song-quote-box">
+              <span class="quote-mark">“</span>
+              <p class="quote-text">
+                Takkan ku berubah walau tak bersama... melintas ruang dan waktu, selamanya.
+              </p>
+              <span class="quote-author">— Panasea, rumahsakit</span>
+            </div>
+
+            <p class="letter-paragraph" id="letter-text-3">
+              Semoga di usiamu yang baru ini, kamu selalu dikelilingi kebahagiaan, senyummu makin bersinar, dan hari-harimu selalu indah. Terima kasih sudah jadi panasea di hidupku.
+            </p>
+
+            <div class="letter-signature">
+              <p class="signature-text">Dari yang selalu menyayangimu,</p>
+              <p class="signature-handwritten">❤️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI KENANGAN (POLAROID GRID) -->
+    <section id="gallery" class="gallery-section">
+      <div class="section-badge">Kenangan Indah</div>
+      <h2 class="section-title">Galeri Kenangan 📷</h2>
+      <p class="section-subtitle">Setiap senyum dan momen manis bersamamu adalah cerita terbaik.</p>
+
+      <div class="polaroid-grid">
+        <!-- POLAROID 1: MASUKKAN FOTO KEISHA DI SINI -->
+        <div class="polaroid-item item-tilt-left" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.01.jpeg" data-caption="Momen Manis 🌸">
+          <div class="polaroid-tape"></div>
+          <div class="polaroid-frame">
+            <div class="polaroid-img-wrapper">
+              <img src="foto/WhatsApp Image 2026-09-15 at 19.24.01.jpeg" alt="Foto Keisha 1" loading="lazy" />
+            </div>
+            <div class="polaroid-caption">Momen Manis 🌸</div>
+          </div>
+        </div>
+
+        <!-- POLAROID 2: MASUKKAN FOTO KEISHA DI SINI -->
+        <div class="polaroid-item item-tilt-right" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.03 (1).jpeg" data-caption="Senyum Favoritku ✨">
+          <div class="polaroid-tape"></div>
+          <div class="polaroid-frame">
+            <div class="polaroid-img-wrapper">
+              <img src="foto/WhatsApp Image 2026-09-15 at 19.24.03 (1).jpeg" alt="Foto Keisha 2" loading="lazy" />
+            </div>
+            <div class="polaroid-caption">Senyum Favoritku ✨</div>
+          </div>
+        </div>
+
+        <!-- POLAROID 3: MASUKKAN FOTO KEISHA DI SINI -->
+        <div class="polaroid-item item-tilt-left-soft" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.03.jpeg" data-caption="Panasea-ku 💖">
+          <div class="polaroid-tape"></div>
+          <div class="polaroid-frame">
+            <div class="polaroid-img-wrapper">
+              <img src="foto/WhatsApp Image 2026-09-15 at 19.24.03.jpeg" alt="Foto Keisha 3" loading="lazy" />
+            </div>
+            <div class="polaroid-caption">Panasea-ku 💖</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERAKTIF: TIUP LILIN & WISH -->
+    <section class="wish-section">
+      <div class="wish-card">
+        <div class="candle-icon">🕯️✨</div>
+        <h3 class="wish-title">Buat Harapan & Tiup Lilin</h3>
+        <p class="wish-desc">Klik tombol di bawah ini untuk mengirimkan doa terbaik dan menyalakan kembang api cinta!</p>
+        <button id="btn-blow-candle" class="btn-vintage-secondary">
+          Tiup Lilin & Kirim Doa 🎂
+        </button>
+        <div id="wish-message" class="wish-message hidden">
+          🎉 Semoga semua impian dan kebahagiaan selalu menyertaimu di usia 18 tahun ini! ✨
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p class="footer-quote">"Melintas ruang dan waktu, selamanya..."</p>
+      <p class="footer-copyright">Dibuat khusus dengan cinta untuk Keisha Zulfa Ramadhani &bull; 18th Birthday Edition</p>
+    </footer>
+
+  </div>
+
+  <!-- LIGHTBOX MODAL FOTO FULLSCREEN -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <span class="lightbox-close" id="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="Enlarged photo" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
