@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy 18th Birthday, Keisha Zulfa Ramadhani! ✨</title>
-  <meta name="description" content="Website ucapan ulang tahun ke-18 spesial bertema vintage romantis untuk Keisha Zulfa Ramadhani." />
+  <title>Selamat Ulang Tahun ke-18, Keisha Zulfa Ramadhani ✨</title>
+  <meta name="description" content="Website ucapan ulang tahun ke-18 spesial untuk Keisha Zulfa Ramadhani." />
 
-  <!-- Google Fonts: Vintage Serif & Readable Sans & Handwritten Accent -->
+  <!-- Google Fonts: Vintage Serif & Clean Sans & Handwritten Accent -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,10 +15,10 @@
 </head>
 <body>
 
-  <!-- Canvas Partikel Kunang-kunang / Light Particles Background -->
+  <!-- Canvas Partikel Kunang-kunang Background -->
   <canvas id="fireflies-canvas"></canvas>
 
-  <!-- Texture Grain Overlay untuk Kesan Vintage -->
+  <!-- Texture Overlay Vintage Grain -->
   <div class="vintage-grain-overlay"></div>
 
   <!-- Audio Element untuk Musik Latar -->
@@ -45,154 +45,217 @@
     </div>
   </div>
 
-  <!-- Main Container Wrapper -->
-  <div class="app-container">
+  <!-- Navigation Bar Utama -->
+  <nav class="main-nav-bar">
+    <div class="nav-container">
+      <button class="nav-tab active" data-target="page-home">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-text">Beranda</span>
+      </button>
+      <button class="nav-tab" data-target="page-letter">
+        <span class="nav-icon">💌</span>
+        <span class="nav-text">Surat</span>
+      </button>
+      <button class="nav-tab" data-target="page-gallery">
+        <span class="nav-icon">📷</span>
+        <span class="nav-text">Galeri</span>
+      </button>
+      <button class="nav-tab" data-target="page-wishes">
+        <span class="nav-icon">✨</span>
+        <span class="nav-text">Harapan</span>
+      </button>
+    </div>
+  </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero-section">
-      <div class="hero-badge">
-        <span class="sparkle-icon">✨</span> Special 18th Birthday Celebration <span class="sparkle-icon">✨</span>
-      </div>
+  <!-- App Main Content Container -->
+  <main class="app-main-content">
 
-      <h1 class="hero-title fade-in-element">
-        Happy 18th Birthday,<br />
-        <span class="highlight-name">Keisha Zulfa Ramadhani!</span>
-      </h1>
+    <!-- PAGE 1: BERANDA (HOME) -->
+    <section id="page-home" class="page-view active-page">
+      <div class="hero-content-wrapper">
+        <div class="hero-badge">
+          <span>✨ 18th Birthday Celebration ✨</span>
+        </div>
 
-      <p class="hero-subtitle fade-in-element delay-1">
-        Hari ini adalah hari istimewa untuk seseorang yang paling berharga.
-      </p>
+        <h1 class="hero-title">
+          Selamat Ulang Tahun,<br />
+          <span class="highlight-name">Keisha Zulfa Ramadhani</span>
+        </h1>
 
-      <div class="hero-action fade-in-element delay-2">
-        <button id="btn-open-letter" class="btn-vintage-primary">
-          Buka Suratnya 💌
-        </button>
-      </div>
+        <p class="hero-description">
+          Satu langkah baru di usia yang ke-18. Terima kasih sudah tumbuh menjadi pribadi yang begitu hangat dan selalu membawa tenang.
+        </p>
 
-      <div class="scroll-down-indicator">
-        <span>Gulir ke bawah</span>
-        <div class="mouse-icon">
-          <div class="wheel"></div>
+        <div class="hero-cta-group">
+          <button class="btn-primary btn-next-page" data-goto="page-letter">
+            Buka Surat 💌
+          </button>
+          <button class="btn-secondary btn-next-page" data-goto="page-gallery">
+            Lihat Galeri Foto 📷
+          </button>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- SURAT CINTA DIGITAL SECTION -->
-    <section id="letter" class="letter-section">
-      <div class="section-badge">Surat Spesial</div>
-      <h2 class="section-title">Sebuah Pesan Untukmu 📜</h2>
+    <!-- PAGE 2: SURAT Ulang Tahun (LETTER) -->
+    <section id="page-letter" class="page-view">
+      <div class="page-container">
+        <div class="section-badge">Surat Spesial</div>
+        <h2 class="page-title">Pesan untuk Keisha 📜</h2>
 
-      <div class="letter-card-container">
-        <!-- Masking Tape Hiasan Atas Card -->
-        <div class="paper-tape tape-top-left"></div>
-        <div class="paper-tape tape-top-right"></div>
+        <div class="letter-card-wrapper">
+          <div class="paper-tape tape-top-left"></div>
+          <div class="paper-tape tape-top-right"></div>
 
-        <div class="letter-card" id="letter-card">
-          <div class="wax-seal">
-            <span>18</span>
-          </div>
+          <article class="letter-card">
+            <div class="wax-seal">
+              <span>18</span>
+            </div>
 
-          <div class="letter-header">
-            <span class="letter-date">18th Birthday Edition</span>
-          </div>
+            <div class="letter-header">
+              <span class="letter-date">18th Birthday Edition</span>
+            </div>
 
-          <div class="letter-body">
-            <!-- Teks Surat Cinta Utama -->
-            <p class="letter-paragraph" id="letter-text-1">
-              Selamat ulang tahun yang ke-18, <strong>Keisha Zulfa Ramadhani</strong>.
-            </p>
-
-            <p class="letter-paragraph" id="letter-text-2">
-              Kamu tau nggak? Buat aku, kamu itu ibarat <em>"Panasea"</em>. Sama seperti lagunya rumahsakit, kamu adalah obat mujarab dan penenang buat segala resahku.
-            </p>
-
-            <div class="song-quote-box">
-              <span class="quote-mark">“</span>
-              <p class="quote-text">
-                Takkan ku berubah walau tak bersama... melintas ruang dan waktu, selamanya.
+            <div class="letter-body">
+              <p class="letter-paragraph">
+                Selamat ulang tahun yang ke-18, <strong>Keisha Zulfa Ramadhani</strong>.
               </p>
-              <span class="quote-author">— Panasea, rumahsakit</span>
-            </div>
 
-            <p class="letter-paragraph" id="letter-text-3">
-              Semoga di usiamu yang baru ini, kamu selalu dikelilingi kebahagiaan, senyummu makin bersinar, dan hari-harimu selalu indah. Terima kasih sudah jadi panasea di hidupku.
-            </p>
+              <p class="letter-paragraph">
+                Memasuki usia 18 tentu bukan sekadar bertambahnya angka, tapi juga awal dari banyak perjalanan baru. Di antara semua hal yang datang dan pergi, kamu selalu punya cara tersendiri untuk membuat hari-hariku terasa lebih tenang dan berarti.
+              </p>
 
-            <div class="letter-signature">
-              <p class="signature-text">Dari yang selalu menyayangimu,</p>
-              <p class="signature-handwritten">❤️</p>
+              <p class="letter-paragraph">
+                Buat aku, kamu itu seperti lagu <em>"Panasea"</em> dari rumahsakit. Kehadiranmu sederhana, tapi selalu berhasil jadi penenang terbaik di tengah sibuk dan bisingnya dunia.
+              </p>
+
+              <div class="song-quote-card">
+                <span class="quote-mark">“</span>
+                <p class="quote-text">
+                  Takkan ku berubah walau tak bersama... melintas ruang dan waktu, selamanya.
+                </p>
+                <span class="quote-author">— Panasea, rumahsakit</span>
+              </div>
+
+              <p class="letter-paragraph">
+                Di usiamu yang ke-18 ini, semoga kamu selalu tumbuh menjadi pribadi yang bahagia, sehat, dan tidak pernah ragu untuk mengejar apa yang kamu impikan. Semoga senyummu tetap menjadi hal paling hangat yang pernah kukenal.
+              </p>
+
+              <p class="letter-paragraph">
+                Terima kasih sudah ada dan jadi bagian penting dalam hidupku.
+              </p>
+
+              <div class="letter-signature">
+                <p class="signature-text">Dengan tulus,</p>
+                <p class="signature-handwritten">❤️</p>
+              </div>
             </div>
-          </div>
+          </article>
+        </div>
+
+        <div class="page-navigation-controls">
+          <button class="btn-nav-outline btn-next-page" data-goto="page-home">
+            ← Beranda
+          </button>
+          <button class="btn-primary btn-next-page" data-goto="page-gallery">
+            Lanjut ke Galeri Foto 📷 →
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- GALERI KENANGAN (POLAROID GRID) -->
-    <section id="gallery" class="gallery-section">
-      <div class="section-badge">Kenangan Indah</div>
-      <h2 class="section-title">Galeri Kenangan 📷</h2>
-      <p class="section-subtitle">Setiap senyum dan momen manis bersamamu adalah cerita terbaik.</p>
+    <!-- PAGE 3: GALERI KENANGAN (GALLERY) -->
+    <section id="page-gallery" class="page-view">
+      <div class="page-container">
+        <div class="section-badge">Momen Spesial</div>
+        <h2 class="page-title">Galeri Kenangan 📷</h2>
+        <p class="page-subtitle">Beberapa kenangan manis yang tersimpan dalam foto.</p>
 
-      <div class="polaroid-grid">
-        <!-- POLAROID 1: MASUKKAN FOTO KEISHA DI SINI -->
-        <div class="polaroid-item item-tilt-left" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.01.jpeg" data-caption="Momen Manis 🌸">
-          <div class="polaroid-tape"></div>
-          <div class="polaroid-frame">
-            <div class="polaroid-img-wrapper">
-              <img src="foto/WhatsApp Image 2026-09-15 at 19.24.01.jpeg" alt="Foto Keisha 1" loading="lazy" />
+        <div class="polaroid-grid">
+          <!-- POLAROID 1: FOTO KEISHA 1 -->
+          <div class="polaroid-item item-tilt-left" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.01.jpeg" data-caption="Momen Manis 🌸">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-frame">
+              <div class="polaroid-img-wrapper">
+                <img src="foto/WhatsApp Image 2026-09-15 at 19.24.01.jpeg" alt="Foto Keisha 1" loading="lazy" />
+              </div>
+              <div class="polaroid-caption">Momen Manis 🌸</div>
             </div>
-            <div class="polaroid-caption">Momen Manis 🌸</div>
+          </div>
+
+          <!-- POLAROID 2: FOTO KEISHA 2 -->
+          <div class="polaroid-item item-tilt-right" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.03 (1).jpeg" data-caption="Senyum Favorit ✨">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-frame">
+              <div class="polaroid-img-wrapper">
+                <img src="foto/WhatsApp Image 2026-09-15 at 19.24.03 (1).jpeg" alt="Foto Keisha 2" loading="lazy" />
+              </div>
+              <div class="polaroid-caption">Senyum Favorit ✨</div>
+            </div>
+          </div>
+
+          <!-- POLAROID 3: FOTO KEISHA 3 -->
+          <div class="polaroid-item item-tilt-left-soft" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.03.jpeg" data-caption="Panasea 💖">
+            <div class="polaroid-tape"></div>
+            <div class="polaroid-frame">
+              <div class="polaroid-img-wrapper">
+                <img src="foto/WhatsApp Image 2026-09-15 at 19.24.03.jpeg" alt="Foto Keisha 3" loading="lazy" />
+              </div>
+              <div class="polaroid-caption">Panasea 💖</div>
+            </div>
           </div>
         </div>
 
-        <!-- POLAROID 2: MASUKKAN FOTO KEISHA DI SINI -->
-        <div class="polaroid-item item-tilt-right" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.03 (1).jpeg" data-caption="Senyum Favoritku ✨">
-          <div class="polaroid-tape"></div>
-          <div class="polaroid-frame">
-            <div class="polaroid-img-wrapper">
-              <img src="foto/WhatsApp Image 2026-09-15 at 19.24.03 (1).jpeg" alt="Foto Keisha 2" loading="lazy" />
-            </div>
-            <div class="polaroid-caption">Senyum Favoritku ✨</div>
-          </div>
-        </div>
-
-        <!-- POLAROID 3: MASUKKAN FOTO KEISHA DI SINI -->
-        <div class="polaroid-item item-tilt-left-soft" data-img="foto/WhatsApp Image 2026-09-15 at 19.24.03.jpeg" data-caption="Panasea-ku 💖">
-          <div class="polaroid-tape"></div>
-          <div class="polaroid-frame">
-            <div class="polaroid-img-wrapper">
-              <img src="foto/WhatsApp Image 2026-09-15 at 19.24.03.jpeg" alt="Foto Keisha 3" loading="lazy" />
-            </div>
-            <div class="polaroid-caption">Panasea-ku 💖</div>
-          </div>
+        <div class="page-navigation-controls">
+          <button class="btn-nav-outline btn-next-page" data-goto="page-letter">
+            ← Kembali ke Surat
+          </button>
+          <button class="btn-primary btn-next-page" data-goto="page-wishes">
+            Lanjut ke Harapan ✨ →
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- INTERAKTIF: TIUP LILIN & WISH -->
-    <section class="wish-section">
-      <div class="wish-card">
-        <div class="candle-icon">🕯️✨</div>
-        <h3 class="wish-title">Buat Harapan & Tiup Lilin</h3>
-        <p class="wish-desc">Klik tombol di bawah ini untuk mengirimkan doa terbaik dan menyalakan kembang api cinta!</p>
-        <button id="btn-blow-candle" class="btn-vintage-secondary">
-          Tiup Lilin & Kirim Doa 🎂
-        </button>
-        <div id="wish-message" class="wish-message hidden">
-          🎉 Semoga semua impian dan kebahagiaan selalu menyertaimu di usia 18 tahun ini! ✨
+    <!-- PAGE 4: HARAPAN & DOA (WISHES) -->
+    <section id="page-wishes" class="page-view">
+      <div class="page-container">
+        <div class="section-badge">Doa & Harapan</div>
+        <h2 class="page-title">Harapan di Usia Baru ✨</h2>
+
+        <div class="wish-card-container">
+          <div class="wish-icon">🕯️✨</div>
+          <h3 class="wish-card-title">Tiup Lilin & Kirim Doa</h3>
+          <p class="wish-card-desc">
+            Semoga setiap harapan baikmu di usia ke-18 tahun ini bisa perlahan terwujud satu per satu.
+          </p>
+
+          <button id="btn-blow-candle" class="btn-primary">
+            Tiup Lilin & Kirim Doa 🎂
+          </button>
+
+          <div id="wish-message" class="wish-message-box hidden">
+            <p>🎉 Selamat ulang tahun ke-18, Keisha Zulfa Ramadhani. Semoga kebahagiaan selalu melingkupi setiap langkahmu!</p>
+          </div>
+        </div>
+
+        <div class="page-navigation-controls center">
+          <button class="btn-nav-outline btn-next-page" data-goto="page-home">
+            🏠 Kembali ke Beranda
+          </button>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <p class="footer-quote">"Melintas ruang dan waktu, selamanya..."</p>
-      <p class="footer-copyright">Dibuat khusus dengan cinta untuk Keisha Zulfa Ramadhani &bull; 18th Birthday Edition</p>
-    </footer>
+  </main>
 
-  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p class="footer-quote">"Melintas ruang dan waktu, selamanya..."</p>
+    <p class="footer-sub">Spesial Ulang Tahun ke-18 Keisha Zulfa Ramadhani</p>
+  </footer>
 
-  <!-- LIGHTBOX MODAL FOTO FULLSCREEN -->
+  <!-- LIGHTBOX MODAL FOTO -->
   <div id="lightbox-modal" class="lightbox-modal">
     <span class="lightbox-close" id="lightbox-close">&times;</span>
     <img class="lightbox-content" id="lightbox-img" alt="Enlarged photo" />
